@@ -10,12 +10,12 @@ const Products = require("./models/productsSchema");
 const DefaultData = require("./defaultdata");
 const cors = require("cors");
 const router = require("./routes/router");
-console.log("hello",process.env.PORT)
+console.log("hello", process.env.PORT)
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://66252e58b8e898c7d840ffad--super-capybara-cf6ef6.netlify.app/",
   credentials: true
 }));
 app.use(router);
@@ -26,11 +26,11 @@ const port = process.env.PORT || 8005;
 
 // for deployment
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"))
+  app.use(express.static("client/build"))
 }
 
 app.listen(port, () => {
-    console.log(`server is running on port number ${port}`);
+  console.log(`server is running on port number ${port}`);
 });
 
 
