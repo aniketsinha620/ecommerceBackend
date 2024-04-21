@@ -253,7 +253,12 @@ router.get("/lougout", (req, res) => {
     }
 })
 
+router.get('/aniket', (req, res) => {
+    res.send("its working fine")
+})
+
 router.post('/login', async (req, res) => {
+
     const { email, password } = req.body;
     console.log(email, password)
     if (!email || !password) {
