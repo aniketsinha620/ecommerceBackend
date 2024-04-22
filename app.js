@@ -17,9 +17,13 @@ app.use(cookieParser());
 
 
 app.use(cors({
-  origin: "https://66253396b7facebee6c03bd2--melodic-semolina-8f4641.netlify.app",
+  origin: "https://ecommerce-frontend-delta-lyart.vercel.app",
   credentials: true
 }));
+// app.use(cors({
+//   origin: "http://localhost:3000",
+//   credentials: true
+// }));
 
 
 app.use(router);

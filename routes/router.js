@@ -282,7 +282,7 @@ router.post('/login', async (req, res) => {
         }
 
         const options = {
-            httpOnly: true,
+            httpsOnly: true,
             secure: true
         };
         res.cookie("accessToken", token, options);
